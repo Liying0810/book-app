@@ -1,0 +1,132 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.navbar {
+  background-color: #4a90e2;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.navbar-right a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  width: 60%;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 16px;
+  font-size: 14px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.book-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-edit {
+  background-color: #2196f3; 
+}
+
+.btn-edit:hover {
+  background-color: #1976d2;
+}
+
+.btn-delete {
+  background-color: #f44336; 
+}
+
+.btn-delete:hover {
+  background-color: #d32f2f;
+}
+
+.book-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 24px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  display: flex;
+  gap: 25px; /* more space between image and text */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 900px; /* optional: limits content width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.book-card img {
+  width: 120px;
+  height: auto;
+  border-radius: 4px;
+  flex-shrink: 0; /* image won’t shrink on small screens */
+}
+
+.book-details {
+  flex: 1;
+  padding: 10px 0; /* vertical padding inside the content */
+  line-height: 1.6;  /* more readable line spacing */
+  font-size: 16px;
+}
+
+.book-details h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+
+.note-section {
+  margin-top: 20px;
+}
+
+.note-section input {
+  width: 70%;
+  padding: 8px;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+

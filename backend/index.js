@@ -31,12 +31,17 @@ app.get('/api/search', async (req, res) => {
 });
 
 // Save book to Firebase
+// Save book to Firebase
 app.post('/api/books', async (req, res) => {
   const book = req.body;
+  console.log('📘 Trying to save this book:', book);  // ADD THIS LINE
+
   try {
     const docRef = await db.collection('books').add(book);
-    res.json({ id: docRef.id }); // ✅ return the real Firebase ID
+    console.log('✅ Saved to Firebase with ID:', docRef.id);  // ADD THIS TOO
+    res.json({ id: docRef.id });
   } catch (err) {
+    console.error('❌ Error saving book:', err);  // This is what we need
     res.status(500).json({ error: 'Error saving book' });
   }
 });

@@ -1,15 +1,14 @@
+// backend/firebase.js
 const admin = require('firebase-admin');
-const dotenv = require('dotenv');
 const path = require('path');
+require('dotenv').config();
 
-dotenv.config();
-
-const serviceAccountPath = process.env.FIREBASE_KEY_PATH;
+const serviceAccount = require(path.join(__dirname, process.env.GOOGLE_APPLICATION_CREDENTIALS));
 
 admin.initializeApp({
-  credential: admin.credential.cert(require(path.resolve(__dirname, serviceAccountPath)))
+  credential: admin.credential.cert(serviceAccount),
 });
 
 const db = admin.firestore();
-
 module.exports = db;
+
